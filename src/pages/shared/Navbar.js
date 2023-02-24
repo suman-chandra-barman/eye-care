@@ -46,7 +46,7 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <Link className="text-xl font-mono text-info font-extrabold">
+          <Link className="text-2xl font-mono text-info font-extrabold">
             Eye Care
           </Link>
         </div>
