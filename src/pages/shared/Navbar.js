@@ -5,10 +5,14 @@ const Navbar = () => {
   const navLink = (
     <>
       <li>
-        <Link className="active:bg-inherit">Home</Link>
+        <Link to="/" className="active:bg-inherit">
+          Home
+        </Link>
       </li>
       <li>
-        <Link className="active:bg-inherit">Services</Link>
+        <Link to="/services" className="active:bg-inherit">
+          Services
+        </Link>
       </li>
       <li>
         <Link className="active:bg-inherit">Add Service</Link>
@@ -46,8 +50,8 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <Link className="text-2xl font-mono text-info font-extrabold">
-            Eye Care
+          <Link className="text-2xl font-mono text-success font-extrabold">
+            Eye<span className="text-warning">Care</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
