@@ -1,9 +1,9 @@
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { name, image, price, description } = service;
+  const { _id, name, image, price, description } = service;
   const { pathname } = useLocation();
 
   let details = "";
@@ -33,9 +33,11 @@ const ServiceCard = ({ service }) => {
           <p className="text-xl font-semibold">
             ${parseFloat(price).toFixed(2)}
           </p>
-          <button className="btn btn-outline btn-success rounded-3xl px-8 hover:border-success hover:bg-success hover:text-white">
-            View Details
-          </button>
+          <Link to={`/services/${_id}`}>
+            <button className="btn btn-outline btn-success rounded-3xl px-8 hover:border-success hover:bg-success hover:text-white">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
